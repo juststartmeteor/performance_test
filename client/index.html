@@ -1,0 +1,41 @@
+<head>
+  <title>performance</title>
+</head>
+
+<body>
+  <br><br>
+  <form class="search-form">
+    <table>
+      <thead></thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="text" name="keyword" class="search-keyword" placeholder="Enter a keyword to search">
+          </td>
+          <td>
+            *{{ amount }} records
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  <br>
+  {{> items}}
+</body>
+
+<template name="items">
+  <table>
+    <thead></thead>
+    <tbody>
+      {{#each items}}
+        <tr>
+          <td>{{first}}</td>
+          <td>{{second}}</td>
+          <td>{{third}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <br>
+  <button type="button" name="more">More</button>
+</template>
